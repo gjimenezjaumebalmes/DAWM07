@@ -8,7 +8,7 @@
 
     <?php
 
-    include ("conexion.php");
+    include("conexion.php");
 
     /* ejemplo de una consulta */
 
