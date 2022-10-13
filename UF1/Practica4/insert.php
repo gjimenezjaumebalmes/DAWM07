@@ -1,5 +1,13 @@
 <html>
+
+
 <body>
+
+<div align="center">
+    <a href="update.php"><button>ACTUALIZAR</button></a>
+    <a href="conexion.php"><button>MOSTRAR DATOS</button></a>
+    <p></p>
+</div>
 
 <?php
 
@@ -21,8 +29,10 @@ if (!$con) {
     Name: <input type="text" name="Name"><br>
     Description: <input type="text" name="Description"><br>
     price: <input type="text" name="price"><br>
+    <p>
     <input type="submit" value="Enviar">
 </form>
+
 
 <?php isset($_POST["Name"]) ? print $_POST["Name"] : ""; ?><br>
 <?php isset($_POST["Description"]) ? print $_POST["Description"] : ""; ?><br>
@@ -30,14 +40,23 @@ if (!$con) {
 
 <?
 
-$the_name = $_POST['name'];
-$the_description = $_POST['description'];
-$the_price = $_POST['price'];
+$name = $_POST['name'];
+$description = $_POST['description'];
+$price = $_POST['price'];
 
-$query = "INSERT INTO `products` `products` (`Name`, `Description`,`price`) VALUES ('$the_name', '$the_description', '$the_price'); ";
+//$query = 'INSERT INTO products (´Name´, ´Description`,`price`) VALUES ('$name', '$description', '$price')';
+$query = 'INSERT INTO products (Name, Description, price) VALUES ('$name', '$description', '$price')';
+$result = mysqli_query($con,$query);
 
-mysqli_query($query);
+if(mysqli_query($result)){
 
+    echo "Se ha insertado";
+
+}else{
+
+    echo "No se ha insertado". mysqli_error($con);
+
+}
 mysqli_close($con);
 ?>
 

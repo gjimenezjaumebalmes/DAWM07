@@ -43,3 +43,13 @@ else
 mysqli_close($con);
 
 ?>
+<html>
+<body >
+<div align="center">
+<h1>MOSTRAR DATOS</h1>
+        <a href="update.php"><button>ACTUALIZAR</button></a>
+        <a href="insert.php"><button>INSERTAR</button></a>
+    <p></p>
+</div>
+</body>
+</html>
