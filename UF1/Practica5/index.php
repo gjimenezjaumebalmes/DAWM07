@@ -13,7 +13,7 @@ $connexion = new PDO($dsn, $username, $password, $options);
 $consulta = "SELECT * FROM products";
 
 //Guardarem tota la info de la bbdd a la variable products
-$products = mysqli_query($connexion, $consulta);
+$products = PDO::query($connexion, $consulta);
 
 ?>
 
