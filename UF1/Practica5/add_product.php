@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
                     ?, ?, ?,?
                 )';
 
-        $statement = $connexio->prepare($sql);
+        $statement = $connexion->prepare($sql);
 
 
         $statement->bind_param('sis', $productName, $productDescription,$productPrice, $productQuantity);
@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
         $statement->execute();
 
 
-        $lastInsertId = $connexio->insert_id;
+        $lastInsertId = $connexion->insert_id;
 
 
         $statement->close();
@@ -61,3 +61,8 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
+
+
+
+</body>
+</html>

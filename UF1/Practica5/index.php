@@ -7,8 +7,7 @@ include("db_connection_pdo.php");//Cridem a la nostra connexió PDO amb la BBDD
 $consulta = "SELECT * FROM PRODUCT";
 
 //Guardarem tota la info de la bbdd a la variable products
-$products = mysqli_query($connexio, $consulta);
-
+$products = mysqli_query($connexion, $consulta);
 
 ?>
 

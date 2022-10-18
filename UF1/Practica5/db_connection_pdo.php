@@ -6,7 +6,7 @@ $username = 'root';
 $password = '';
 $options = [];
 
-$connexio = new PDO($dsn, $username, $password, $options);
+$connexion = new PDO($dsn, $username, $password, $options);
 
 
 ?>
