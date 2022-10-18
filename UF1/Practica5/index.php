@@ -1,10 +1,16 @@
 <?php
+// Falla per culpa de que no reconeix la connexio
 
+// parametros
+$dsn = 'mysql:host=localhost;port=3336;dbname=dbproducts';
+$username = 'root';
+$password = '';
+$options = [];
 
-include("db_connection_pdo.php");//Cridem a la nostra connexió PDO amb la BBDD
+$connexion = new PDO($dsn, $username, $password, $options);
 
 //Fem la QUERY per obtindre tota la info de la taula
-$consulta = "SELECT * FROM PRODUCT";
+$consulta = "SELECT * FROM products";
 
 //Guardarem tota la info de la bbdd a la variable products
 $products = mysqli_query($connexion, $consulta);
