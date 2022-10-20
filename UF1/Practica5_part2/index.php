@@ -1,5 +1,5 @@
 <?php
-
+//db
 try {
     //Connexió a la BBDD
     $myCon = new PDO('mysql:host=localhost; dbname=products', 'root', '');
