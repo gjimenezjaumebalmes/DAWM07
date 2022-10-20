@@ -30,17 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `product` (
   `Name` varchar(50) NOT NULL,
   `Description` varchar(50) NOT NULL,
-  `price` varchar(50) NOT NULL
+  `price` varchar(50) NOT NULL,
+  `quantity` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `product`
 --
 
-INSERT INTO `product` (`Name`, `Description`, `price`) VALUES
-('iphone 11', 'Smartphone', '399'),
-('OPPO', 'Smartphone', '599'),
-('Huawei p40', 'Smartphone', '699');
+INSERT INTO `product` (`Name`, `Description`, `price`, `quantity`) VALUES
+('iphone 11', 'Smartphone', '399', '2'),
+('OPPO', 'Smartphone', '599', '2'),
+('Huawei p40', 'Smartphone', '699', '2');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
