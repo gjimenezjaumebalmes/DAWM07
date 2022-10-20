@@ -2,7 +2,7 @@
 //db
 try {
     //Connexió a la BBDD
-    $myCon = new PDO('mysql:host=localhost; dbname=products', 'root', '');
+    $myCon = new PDO('mysql:host=localhost; dbname=products', 'test', 'test');
     //Creem la consulta sql
     $sql ="SELECT * FROM product";
 
