@@ -13,6 +13,7 @@
     </div>
 </div>
 <?php
+
 try {
     //Connexió a la BBDD
     $myCon = new PDO('mysql:host=localhost:3336; dbname=products', 'root', '');
@@ -26,10 +27,10 @@ try {
 isset($_POST["Name"]);
 $name = $_POST['Name'];
 
-$sql = "DELETE FROM products WHERE ($name)";
-// Consulta sobre la conexion
-$deleteProduct = PDO::query($myCon,$sql);
-
+$sql = "DELETE FROM product WHERE ($name)";
+// Consulta sobre la consulta
+$products = $myCon->query($sql);
+foreach ($products as $i => $product);
 
 
 
