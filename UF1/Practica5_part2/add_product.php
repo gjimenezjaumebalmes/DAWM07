@@ -12,6 +12,52 @@ try {
 }
 
 
+if (isset($_POST['submit'])) {
+
+    $productName = isset($_POST['name']) ? $_POST['name'] : '';
+    $productDescription = isset($_POST['description']) ? $_POST['description'] : '';
+    $productPrice = isset($_POST['price']) ? $_POST['price'] : 0;
+    $productQuantity = isset($_POST['quantity']) ? $_POST['quantity'] : 0;
+
+
+    /*
+     * Validate posted values.
+     */
+    if (empty($productName)) {
+        $errors[] = 'Please provide a product name.';
+    }
+
+    if (empty($productDescription)) {
+        $errors[] = 'Please provide a description.';
+    }
+
+    if (empty($productPrice)) {
+        $errors[] = 'Please provide a description.';
+    }
+
+    if ($productQuantity == 0) {
+        $errors[] = 'Please provide the quantity.';
+    }
+
+    if (!isset($errors)) {
+
+        $sql = 'INSERT INTO products (
+                    name,
+                    description,
+                    price,
+                    quantity
+                ) VALUES (
+                    ?, ?, ?,?
+                )';
+
+
+    }
+
+
+}
+
+
+$products=$myCon->query($sql);
 
 
 
@@ -25,7 +71,7 @@ try {
         <div class="col-md-4">
             <div class="card card-body">
                 <!-- A través del mètode POST li enviem les dades del formulari a l'arxiu add_product.php -->
-                <form action="add_product.php" method="POST">
+                <form action="" method="POST">
                     <div class=form-group>
                         <input type="text" name="name" class="form-control" placeholder="Name" autofocus>
                     </div>
