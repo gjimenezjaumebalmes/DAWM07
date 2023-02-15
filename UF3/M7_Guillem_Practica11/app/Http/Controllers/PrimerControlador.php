@@ -10,8 +10,12 @@ class PrimerControlador extends Controller
         return view('principal');
     }
 
-    public function hola(){
-//        return 'Estem al metode hola';
-        return view('holaMissatge') -> with(['text' => 'Hello World']);
+
+    public function hola($persona = ''){
+        $textoFinal = 'Hola, ';
+        $textoFinal .= ($persona == '')?'mundo':$persona;
+        return view('HolaMissatge') -> with(['text' => $textoFinal]);
     }
+
+
 }

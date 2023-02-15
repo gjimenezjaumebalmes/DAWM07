@@ -25,6 +25,7 @@ Route::get('/hola', function () {
     return view('holaMissatge');
 });
 
-Route::get('/', [PrimerControlador::class, 'arrel']);
-Route::get('/hola', [PrimerControlador::class, 'hola']);
+Route::get('/', [PrimerControlador::class, 'arrel']); // Ruta per arrel
+Route::get('/hola', [PrimerControlador::class, 'hola']); // Ruta per hola
+Route::get('/hola/{persona?}',[PrimerControlador::class, 'hola']); // Ruta per hola - Nom
 
