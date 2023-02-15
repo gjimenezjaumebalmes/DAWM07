@@ -29,3 +29,5 @@ Route::get('/', [PrimerControlador::class, 'arrel']); // Ruta per arrel
 Route::get('/hola', [PrimerControlador::class, 'hola']); // Ruta per hola
 Route::get('/hola/{persona?}',[PrimerControlador::class, 'hola']); // Ruta per hola - Nom
 
+Route::get('/parametros/{param1}/{param2}/{param3}/',[PrimerControlador::class, 'PruebaParametros']); // Ruta per hola - Nom
+
