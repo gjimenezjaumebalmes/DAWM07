@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PrimerControlador;
+use App\Http\Controllers\controladorEjercicio1;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,21 +13,7 @@ use App\Http\Controllers\PrimerControlador;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-Route::get('/', function () {
-    return view('principal');
-});
-
-Route::get('/hola', function () {
-    return view('holaMissatge');
-});
-
-Route::get('/', [PrimerControlador::class, 'arrel']); // Ruta per arrel
-Route::get('/hola', [PrimerControlador::class, 'hola']); // Ruta per hola
-Route::get('/hola/{persona?}',[PrimerControlador::class, 'hola']); // Ruta per hola - Nom
-
-Route::get('/parametros/{param1}/{param2}/{param3}/',[PrimerControlador::class, 'PruebaParametros']); // Ruta per hola - Nom
-
+Route::get('/ej1s1', [controladorEjercicio1::class, 'ej1s1']);
+Route::get('/ej1s2/{menajeEj1}', [controladorEjercicio1::class, 'ej1s2']);
+Route::get('/ej1s3/primeraView', [controladorEjercicio1::class, 'ej1s3']);
+Route::get('/parametros/{param1}/{param2}/{param3}/{param4}',  [controladorEjercicio1::class, 'cuatroParametros']);
